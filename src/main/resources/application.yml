@@ -59,6 +59,9 @@ spring:
       max-file-size: ${MAX_UPLOAD_MULTIPART_FILE_SIZE:25}MB
       max-request-size: 100MB
 
+consul:
+  url: http://${CONSUL_HOST:consul}:${CONSUL_PORT:8500}
+
 db:
   hikari:
     datasources:
