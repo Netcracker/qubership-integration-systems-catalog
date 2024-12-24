@@ -25,7 +25,7 @@ spring:
     cloud_service_name: ${spring.application.name}-${spring.application.deployment_version}
     deployment_version: ${DEPLOYMENT_VERSION:v1}
   config:
-    import: consul:${CONSUL_URL:consul:8500}
+    import: consul:${CONSUL_URL:http://consul:8500}
   cloud:
     discovery:
       enabled: false
@@ -60,7 +60,7 @@ spring:
       max-request-size: 100MB
 
 consul:
-  url: http://${CONSUL_URL:consul:8500}
+  url: ${CONSUL_URL:http://consul:8500}
 
 db:
   hikari:
