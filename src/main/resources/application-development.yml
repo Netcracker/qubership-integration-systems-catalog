@@ -34,7 +34,7 @@ spring:
     show-sql: false
 
 consul:
-  url: http://${CONSUL_URL:consul:8500}
+  url: ${CONSUL_URL:http://consul:8500}
 
 qip:
   datasource:
